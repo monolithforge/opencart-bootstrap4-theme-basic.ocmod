@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @category   MonolithForge/OpenCart/Bootstrap4Basic
+ * @category   MonolithForge/OpenCart/Bootstrap4ThemeBasic
  * @package    opencart-bootstrap4-theme-basic
  * @author     dev@monolithforge.com
  * @copyright  2018 Monolith Forge, LLC
