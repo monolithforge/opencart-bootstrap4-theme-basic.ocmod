@@ -1,0 +1,94 @@
+{##
+/**
+ * @category   MonolithForge/OpenCart/Bootstrap4Basic
+ * @package    monolithforge-opencart-bootstrap4-basic
+ * @author     dev@monolithforge.com, @TODO
+ * @copyright  2018 Monolith Forge, LLC
+ * @license    https://www.monolithforge.com/license/boostrap4-basic-license.txt
+ * @version    3.0.2.0-bootstrap4-theme-basic-a2
+ */
+#}
+<!doctype html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="{{ direction }}" lang="{{ lang }}">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ title }}</title>
+<base href="{{ base }}" />
+{% if description %}
+<meta name="description" content="{{ description }}" />
+{% endif %}
+{% if keywords %}
+<meta name="keywords" content="{{ keywords }}" />
+{% endif %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
+<link href="catalog/view/theme/bootstrap4_basic/stylesheet/stylesheet.css?v=7" rel="stylesheet">
+{% for style in styles %}
+<link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+{% endfor %}
+{% for script in scripts %}
+<script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+<script src="catalog/view/theme/bootstrap4_basic/javascript/common.js" type="text/javascript"></script>
+{% for link in links %}
+<link href="{{ link.href }}" rel="{{ link.rel }}" />
+{% endfor %}
+{% for analytic in analytics %}
+{{ analytic }}
+{% endfor %}
+</head>
+<body>
+<nav id="top">
+  <div class="container">{{ currency }}
+    {{ language }}
+    <ul id="top-links" class="nav float-right">
+        <li class="nav-item"><a href="{{ contact }}" class="nav-link"><i class="fa fa-phone"></i> <span class="d-none d-md-none d-lg-inline-block">{{ telephone }}</span></a></li>
+        <li class="nav-item dropdown"><a href="{{ account }}" title="{{ text_account }}" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> <span class="d-none d-md-none d-lg-inline-block">{{ text_account }}</span></a>
+          <div class="dropdown-menu">
+            {% if logged %}
+            <a href="{{ account }}" class="dropdown-item">{{ text_account }}</a>
+            <a href="{{ order }}" class="dropdown-item">{{ text_order }}</a>
+            <a href="{{ transaction }}" class="dropdown-item">{{ text_transaction }}</a>
+            <a href="{{ download }}" class="dropdown-item">{{ text_download }}</a>
+            <a href="{{ logout }}" class="dropdown-item">{{ text_logout }}</a>
+            {% else %}
+            <a href="{{ register }}" class="dropdown-item">{{ text_register }}</a>
+            <a href="{{ login }}" class="dropdown-item">{{ text_login }}</a>
+            {% endif %}
+          </div>
+        </li>
+        <li class="nav-item"><a href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}" class="nav-link"><i class="fa fa-heart"></i> <span class="d-none d-md-none d-lg-inline-block">{{ text_wishlist }}</span></a></li>
+        <li class="nav-item"><a href="{{ shopping_cart }}" title="{{ text_shopping_cart }}" class="nav-link"><i class="fa fa-shopping-cart"></i> <span class="d-none d-md-none d-lg-inline-block">{{ text_shopping_cart }}</span></a></li>
+        <li class="nav-item"><a href="{{ checkout }}" title="{{ text_checkout }}" class="nav-link"><i class="fa fa-share"></i> <span class="d-none d-md-none d-lg-inline-block">{{ text_checkout }}</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div id="logo">{% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-fluid" /></a>{% else %}
+          <h1><a href="{{ home }}">{{ name }}</a></h1>
+          {% endif %}</div>
+      </div>
+      <div class="col-sm-5">{{ search }}</div>
+      <div class="col-sm-3">{{ cart }}</div>
+    </div>
+  </div>
+</header>
+{{ menu }}
+

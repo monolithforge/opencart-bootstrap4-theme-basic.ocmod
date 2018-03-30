@@ -1,0 +1,732 @@
+/**
+ * @category   MonolithForge/OpenCart/Bootstrap4Basic
+ * @package    monolithforge-opencart-bootstrap4-basic
+ * @author     dev@monolithforge.com, @TODO
+ * @copyright  2018 Monolith Forge, LLC
+ * @license    https://www.monolithforge.com/license/boostrap4-basic-license.txt
+ * @version    3.0.2.0-bootstrap4-theme-basic-a2
+ */
+ 
+Start migrating using this doc: https://getbootstrap.com/docs/4.0/migration/
+
+= Stable changes
+Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, but there are some notable changes.
+
+== Printing
+  //'d-print' none found
+
+= Beta 3 changes
+  //'thumbnail-transition' none found
+
+== Miscellaneous
+  //'thumbnail-transition' none found
+  //'node_modules' none found
+
+== Forms
+...@TODO
+
+== Input groups
+...@TODO
+
+= Beta 2 changes
+...@TODO
+
+== Breaking
+  //'badge-color' none found
+  //'badge' none found
+  //'grayscale' none found
+  //'table-inverse' none found
+  //'thead-inverse' none found
+  //'thead-default' none found
+  //'table-responsive' weirdness found in:
+    // @TODO? upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/laybuy.twig:  <table class="table table-responsive table-condensed" id="payment-table">
+  //'form-control-label' none found
+  //'col-form-label' none found
+  //'color-yiq' none found
+
+== Highlights
+  //'pointer-events' none found
+  //'modal-dialog' found in:
+    // @TODO? upload/catalog/view/theme/bootstrap4_basic/javascript/common.js:			html += '  <div class="modal-dialog">';
+    // @TODO? upload/catalog/view/theme/bootstrap4_basic/template/extension/total/shipping.twig:				html += '  <div class="modal-dialog">';
+    //'modal-backdrop' none found
+    //'modal-content' found in:
+      // @TODO? upload/catalog/view/theme/bootstrap4_basic/javascript/common.js:			html += '    <div class="modal-content">';
+      // @TODO? upload/catalog/view/theme/bootstrap4_basic/template/extension/total/shipping.twig:				html += '    <div class="modal-content">';
+
+== Summary
+  // none found
+
+== Browser Support
+  // none found
+
+== Global Changes
+  @TODO? Revamped grid tiers to add a fifth option (addressing smaller devices at 576px and below) and removed the -xs infix from those classes. Example: .col-6.col-sm-4.col-md-3.
+  @TODO? Added dozens of new <a href="https://getbootstrap.com/docs/4.0/utilities/">utility classes</a> for common CSS property-value pairs and margin/padding spacing shortcuts.
+
+== Grid System
+  // @TODO! Updated grid class names and a new grid tier.
+    // @TODO? change all col-sm-3, col-sm-6 to col-3, col-6? etc. (or append col-3, col-6 etc. for xs?)
+      // @TODO trial by trial basis testing each twig file accordingly...  `panreach:monolithforge-opencart-bootstrap4-theme-basic.ocmod admin$ grep col-sm -R *`
+  
+== Components
+  // @FINISHED
+  // cool no glyphicon!
+  // no affix? @TODO?
+
+= By component
+  //Typography
+    //`page-header` only in admin
+    //`dl-horizontal` none found
+    //`list-inline` none found
+  
+  //Images
+    //`img-responsive` @FINISHED
+    //`img-rounded` none found
+    //`img-circle` none found
+  
+  //Tables
+    //`table-responsive` see above
+    //`table-condensed`: // @TODO above ? upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/laybuy.twig:  <table class="table table-responsive table-condensed" id="payment-table">
+  
+  //Forms
+    // rename control-label to col-form-label @FINISHED
+    
+    //`input-lg` none found
+    //`input-sm` none found
+    
+    //`form-group` found in: (@NOTE this might only apply to form-group-* classes which none were found.)
+    // upload/catalog/view/theme/bootstrap4_basic/javascript/common.js:		if (element.hasClass('form-group')) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.form-group[data-sort]').detach().each(function() {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:	if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('.form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:		$('.form-group').eq(parseInt($(this).attr('data-sort'))+2).before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:	if ($(this).attr('data-sort') > $('.form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:		$('.form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:	if ($(this).attr('data-sort') == $('.form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:		$('.form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:	if ($(this).attr('data-sort') < -$('.form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:		$('.form-group:first').before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group payment" id="payment-cheque">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group payment" id="payment-paypal">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:            <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:            <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:            <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:            <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:            <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.form-group[data-sort]').detach().each(function() {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:	if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('.form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:		$('.form-group').eq($(this).attr('data-sort')).before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:	if ($(this).attr('data-sort') > $('.form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:		$('.form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:	if ($(this).attr('data-sort') == $('.form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:		$('.form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:	if ($(this).attr('data-sort') < -$('.form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:		$('.form-group:first').before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:          <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:$('.form-group[data-sort]').detach().each(function() {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:	if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('.form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:		$('.form-group').eq($(this).attr('data-sort')).before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:	if ($(this).attr('data-sort') > $('.form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:		$('.form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:	if ($(this).attr('data-sort') == $('.form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:		$('.form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:	if ($(this).attr('data-sort') < -$('.form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:		$('.form-group:first').before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/forgotten.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/login.twig:              <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/login.twig:              <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/newsletter.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/password.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/password.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div class="form-group required" style="display: {% if customer_groups|length > 1 %} block {% else %} none {% endif %};">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:$('#account .form-group[data-sort]').detach().each(function() {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:	if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:		$('#account .form-group').eq($(this).attr('data-sort')).before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:	if ($(this).attr('data-sort') > $('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:		$('#account .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:	if ($(this).attr('data-sort') == $('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:		$('#account .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:	if ($(this).attr('data-sort') < -$('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:		$('#account .form-group:first').before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/reset.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/reset.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/tracking.twig:        <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/tracking.twig:        <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/tracking.twig:        <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/voucher.twig:        <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/voucher.twig:        <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/voucher.twig:        <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/voucher.twig:        <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/voucher.twig:        <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/voucher.twig:        <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/voucher.twig:        <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/login.twig:              <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/login.twig:              <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div class="form-group required" style="display: {% if customer_groups|length > 1 %} block {% else %} none {% endif %};">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div class="form-group payment required" id="payment-cheque">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div class="form-group payment required" id="payment-paypal">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:            <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:            <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:            <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:            <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:            <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:            <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:            <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:            <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:            <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:            <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:            <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:            <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:            <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:            <div id="custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('#account .form-group[data-sort]').detach().each(function() {
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:	if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:		$('#account .form-group').eq($(this).attr('data-sort')).before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:	if ($(this).attr('data-sort') > $('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:		$('#account .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:	if ($(this).attr('data-sort') == $('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:		$('#account .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:	if ($(this).attr('data-sort') < -$('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:		$('#account .form-group:first').before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('#affiliate .form-group[data-sort]').detach().each(function() {
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:	if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('#affiliate .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:		$('#affiliate .form-group').eq($(this).attr('data-sort')).before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:	if ($(this).attr('data-sort') > $('#affiliate .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:		$('#affiliate .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:	if ($(this).attr('data-sort') == $('#affiliate .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:		$('#affiliate .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:	if ($(this).attr('data-sort') < -$('#affiliate .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:		$('#affiliate .form-group:first').before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/checkout.twig:			$('.form-group').removeClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/checkout.twig:            $('.form-group').removeClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/checkout.twig:            $('.form-group').removeClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/checkout.twig:			$('.form-group').removeClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/checkout.twig:			$('.form-group').removeClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/checkout.twig:			$('.form-group').removeClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/checkout.twig:			$('.form-group').removeClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div class="form-group" style="display: {% if customer_groups|length > 1 %} block {% else %} none {% endif %};">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('#account .form-group[data-sort]').detach().each(function() {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:	if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:		$('#account .form-group').eq($(this).attr('data-sort')).before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:	if ($(this).attr('data-sort') > $('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:		$('#account .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:	if ($(this).attr('data-sort') == $('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:		$('#account .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:	if ($(this).attr('data-sort') < -$('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:		$('#account .form-group:first').before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('#address .form-group[data-sort]').detach().each(function() {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:	if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('#address .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:		$('#address .form-group').eq($(this).attr('data-sort')).before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:	if ($(this).attr('data-sort') > $('#address .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:		$('#address .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:	if ($(this).attr('data-sort') == $('#address .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:		$('#address .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:	if ($(this).attr('data-sort') < -$('#address .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:		$('#address .form-group:first').before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:  <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:$('#collapse-shipping-address .form-group[data-sort]').detach().each(function() {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:	if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('#collapse-shipping-address .form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:		$('#collapse-shipping-address .form-group').eq(parseInt($(this).attr('data-sort'))+2).before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:	if ($(this).attr('data-sort') > $('#collapse-shipping-address .form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:		$('#collapse-shipping-address .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:	if ($(this).attr('data-sort') == $('#collapse-shipping-address .form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:		$('#collapse-shipping-address .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:	if ($(this).attr('data-sort') < -$('#collapse-shipping-address .form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:		$('#collapse-shipping-address .form-group:first').before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/login.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/login.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:$('#collapse-payment-address .form-group[data-sort]').detach().each(function() {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:	if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('#collapse-payment-address .form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:		$('#collapse-payment-address .form-group').eq(parseInt($(this).attr('data-sort'))+2).before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:	if ($(this).attr('data-sort') > $('#collapse-payment-address .form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:		$('#collapse-payment-address .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:	if ($(this).attr('data-sort') == $('#collapse-payment-address .form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:		$('#collapse-payment-address .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:	if ($(this).attr('data-sort') < -$('#collapse-payment-address .form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:		$('#collapse-payment-address .form-group:first').before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div class="form-group" style="display: {% if customer_groups|length > 1 %} block {% else %} none {% endif %};">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:$('#account .form-group[data-sort]').detach().each(function() {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:	if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:		$('#account .form-group').eq($(this).attr('data-sort')).before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:	if ($(this).attr('data-sort') > $('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:		$('#account .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:	if ($(this).attr('data-sort') == $('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:		$('#account .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:	if ($(this).attr('data-sort') < -$('#account .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:		$('#account .form-group:first').before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:$('#address .form-group[data-sort]').detach().each(function() {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:	if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('#address .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:		$('#address .form-group').eq($(this).attr('data-sort')).before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:	if ($(this).attr('data-sort') > $('#address .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:		$('#address .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:	if ($(this).attr('data-sort') == $('#address .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:		$('#address .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:	if ($(this).attr('data-sort') < -$('#address .form-group').length) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:		$('#address .form-group:first').before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:    <div class="form-group{% if custom_field.required %} required {% endif %} custom-field" data-sort="{{ custom_field.sort_order }}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:$('#collapse-shipping-address .form-group[data-sort]').detach().each(function() {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:	if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('#collapse-shipping-address .form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:		$('#collapse-shipping-address .form-group').eq(parseInt($(this).attr('data-sort'))+2).before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:	if ($(this).attr('data-sort') > $('#collapse-shipping-address .form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:		$('#collapse-shipping-address .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:	if ($(this).attr('data-sort') == $('#collapse-shipping-address .form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:		$('#collapse-shipping-address .form-group:last').after(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:	if ($(this).attr('data-sort') < -$('#collapse-shipping-address .form-group').length-2) {
+    // upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:		$('#collapse-shipping-address .form-group:first').before(this);
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/captcha/basic.twig:  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/captcha/google.twig:  <div class="form-group required">{% if route|slice(0, 9) == 'checkout/' %}
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/credit_card/sagepay_direct_form.twig:            <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/credit_card/sagepay_direct_form.twig:            <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/credit_card/sagepay_direct_form.twig:            <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/credit_card/sagepay_direct_form.twig:            <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/credit_card/sagepay_direct_form.twig:            <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/authorizenet_aim.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/authorizenet_aim.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/authorizenet_aim.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/authorizenet_aim.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/bluepay_redirect.twig:			<div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/bluepay_redirect.twig:				<div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/bluepay_redirect.twig:				<div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/bluepay_redirect.twig:                <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/bluepay_redirect.twig:                <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/bluepay_redirect.twig:                <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/bluepay_redirect.twig:					<div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:      <div class="form-group" {% if not store_cards %} style="display: none;" {% endif %}>
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:        <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:        <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:        <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:        <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:        <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:        <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:				$('#input-card-number').closest('.form-group').addClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:				$('#input-card-cvv2').closest('.form-group').addClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:				$('#input-card-choice').closest('.form-group').addClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:				$('#input-method').closest('.form-group').addClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:				$('#input-account-number').closest('.form-group').addClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:				$('#input-routing-number').closest('.form-group').addClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardinity.twig:  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardinity.twig:  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardinity.twig:  <div id="expiry-date-group" class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardinity.twig:  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardinity.twig:  <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardinity.twig:					$('#input-holder').closest('.form-group').addClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardinity.twig:					$('#input-pan').closest('.form-group').addClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardinity.twig:					$('#input-cvc').closest('.form-group').addClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/eway.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/eway.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/eway.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/eway.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/eway.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/firstdata_remote.twig:      <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/firstdata_remote.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/firstdata_remote.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/firstdata_remote.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/firstdata_remote.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/firstdata_remote.twig:      <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/firstdata_remote.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/globalpay.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/globalpay_remote.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/globalpay_remote.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/globalpay_remote.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/globalpay_remote.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/globalpay_remote.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/globalpay_remote.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_account.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_account.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_account.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_account.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_account.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_account.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_account.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_account.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_invoice.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_invoice.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_invoice.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_invoice.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_invoice.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_invoice.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_invoice.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_invoice.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/laybuy.twig:  <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/laybuy.twig:  <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/perpetual_payments.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/perpetual_payments.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/perpetual_payments.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/perpetual_payments.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/perpetual_payments.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_braintree.twig:      <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_braintree.twig:        <div class="form-group row">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_braintree.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_braintree.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_braintree.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_braintree.twig:      <div class="form-group row">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_braintree.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_braintree.twig:  <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_payflow.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_payflow.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_payflow.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_payflow.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_payflow.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_payflow.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_payflow.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_pro.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_pro.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_pro.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_pro.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_pro.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_pro.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/realex.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/realex_remote.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/realex_remote.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/realex_remote.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/realex_remote.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/realex_remote.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/realex_remote.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:		<div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:		  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:		  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:		<div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:		<div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:		<div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:		<div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:		<div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:			<div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_server.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_server.twig:      <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_server.twig:    <div style="display:none" id="card-save" class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_server.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_server.twig:    <div id="card-save" class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_us.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_us.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_us.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_us.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/securetrading_pp.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/securetrading_pp.twig:    <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/securetrading_ws.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/securetrading_ws.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/securetrading_ws.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/securetrading_ws.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/squareup.twig:        <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/squareup.twig:        <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/squareup.twig:        <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/squareup.twig:        <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/squareup.twig:        <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/squareup.twig:            <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/web_payment_software.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/web_payment_software.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/web_payment_software.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/web_payment_software.twig:    <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/worldpay.twig:	  <div id="choose-card" class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/worldpay.twig:		  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/worldpay.twig:		  <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/worldpay.twig:	  <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/worldpay.twig:		  <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/total/shipping.twig:        <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/total/shipping.twig:        <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/total/shipping.twig:        <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/information/contact.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/information/contact.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/information/contact.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/information/tracking.twig:          <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/information/tracking.twig:            $('.form-group').removeClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/category.twig:          <div class="form-group"><a href="{{ compare }}" id="compare-total" class="btn btn-link">{{ text_compare }}</a></div>
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/category.twig:          <div class="form-group input-group input-group-sm">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/category.twig:          <div class="form-group input-group input-group-sm">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/manufacturer_info.twig:          <div class="form-group"> <a href="{{ compare }}" id="compare-total" class="btn btn-link">{{ text_compare }}</a> </div>
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/manufacturer_info.twig:          <div class="form-group input-group input-group-sm">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/manufacturer_info.twig:          <div class="form-group input-group input-group-sm">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:                <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:                <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:                <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:            <div class="form-group{% if option.required %} required {% endif %}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:            <div class="form-group{% if option.required %} required {% endif %}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:            <div class="form-group{% if option.required %} required {% endif %}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:            <div class="form-group{% if option.required %} required {% endif %}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:            <div class="form-group{% if option.required %} required {% endif %}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:            <div class="form-group{% if option.required %} required {% endif %}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:            <div class="form-group{% if option.required %} required {% endif %}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:            <div class="form-group{% if option.required %} required {% endif %}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:            <div class="form-group{% if option.required %} required {% endif %}">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:            <div class="form-group required">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:            <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:			$('.form-group').removeClass('has-error');
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/search.twig:          <div class="form-group">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/search.twig:          <div class="form-group input-group input-group-sm">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/search.twig:          <div class="form-group input-group input-group-sm">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/special.twig:          <div class="form-group"><a href="{{ compare }}" id="compare-total" class="btn btn-link">{{ text_compare }}</a></div>
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/special.twig:          <div class="form-group input-group input-group-sm">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/special.twig:          <div class="form-group input-group input-group-sm">
+    
+    // rename help-block to form-text @FINISHED
+    
+    //`radio-inline` found in:
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:              <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:              <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:              <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:              <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/newsletter.twig:              <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/newsletter.twig:              <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/newsletter.twig:              <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/newsletter.twig:              <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:              <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:              <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:              <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:              <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:              <label class="radio-inline"> {% if opened %}
+    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:              <label class="radio-inline"> {% if not opened %}
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/bluepay_redirect.twig:					<label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/bluepay_redirect.twig:					<label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:          <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:          <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_account.twig:        <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_account.twig:        <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_invoice.twig:        <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_invoice.twig:        <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:			<label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:			<label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_server.twig:        <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_server.twig:        <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_server.twig:        <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/worldpay.twig:		  <label class="radio-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/worldpay.twig:		  <label class="radio-inline">
+    
+    //`checkbox-inline` found in:
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/search.twig:          <label class="checkbox-inline">
+    // upload/catalog/view/theme/bootstrap4_basic/template/product/search.twig:        <label class="checkbox-inline">
+    
+    // .checkbox and .radio @TODO?
+    
+    //.form-horizontal conversion @FINISHED basic...
+    
+    //.form-row and go!!! @@TODO?
+    
+    //has-error @TODO
+    
+    //has-warning none found
+    //has-success none found
+    //form-control-static none found
+    
+  //Buttons
+    //rename btn-default to btn-secondary @FINISHED
+    
+    //btn-xs found in:
+    // upload/catalog/view/theme/bootstrap4_basic/stylesheet/stylesheet.css:.btn-xs {
+    // upload/catalog/view/theme/bootstrap4_basic/stylesheet/stylesheet.css:.btn-group > .btn-xs {
+    // upload/catalog/view/theme/bootstrap4_basic/template/common/cart.twig:          <td class="text-center"><button type="button" onclick="cart.remove('{{ product.cart_id }}');" title="{{ button_remove }}" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button></td>
+    // upload/catalog/view/theme/bootstrap4_basic/template/common/cart.twig:          <td class="text-center text-danger"><button type="button" onclick="voucher.remove('{{ voucher.key }}');" title="{{ button_remove }}" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button></td>
+    
+    //button states @TODO
+    //button [disabled] to :disabled @TODO
+    
+  //Button group
+    //btn-group-justified none found
+    //btn-group-xs none found
+  
+  //Dropdowns
+

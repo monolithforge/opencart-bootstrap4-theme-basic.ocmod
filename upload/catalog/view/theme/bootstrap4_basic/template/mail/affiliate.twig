@@ -1,0 +1,30 @@
+{##
+/**
+ * @category   MonolithForge/OpenCart/Bootstrap4Basic
+ * @package    monolithforge-opencart-bootstrap4-basic
+ * @author     dev@monolithforge.com, @TODO
+ * @copyright  2018 Monolith Forge, LLC
+ * @license    https://www.monolithforge.com/license/boostrap4-basic-license.txt
+ * @version    3.0.2.0-bootstrap4-theme-basic-a2
+ */
+#}
+{{ text_welcome }}
+
+{% if not approval %}
+{{ text_login }}
+
+{{ login }}
+
+{{ text_service }}
+
+{{ text_thanks }}
+{{ store }}
+{% else %}
+{{ text_approval }}
+
+{{ login }}
+
+{{ text_thanks }}
+{{ store }}
+{% endif %}
+

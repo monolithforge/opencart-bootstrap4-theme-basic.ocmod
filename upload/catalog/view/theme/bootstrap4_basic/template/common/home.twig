@@ -1,0 +1,25 @@
+{##
+/**
+ * @category   MonolithForge/OpenCart/Bootstrap4Basic
+ * @package    monolithforge-opencart-bootstrap4-basic
+ * @author     dev@monolithforge.com, @TODO
+ * @copyright  2018 Monolith Forge, LLC
+ * @license    https://www.monolithforge.com/license/boostrap4-basic-license.txt
+ * @version    3.0.2.0-bootstrap4-theme-basic-a2
+ */
+#}
+{{ header }}
+<div id="common-home" class="container">
+  <div class="row">{{ column_left }}
+    {% if column_left and column_right %}
+    {% set class = 'col-sm-6' %}
+    {% elseif column_left or column_right %}
+    {% set class = 'col-sm-9' %}
+    {% else %}
+    {% set class = 'col-sm-12' %}
+    {% endif %}
+    <div id="content" class="{{ class }}">{{ content_top }}{{ content_bottom }}</div>
+    {{ column_right }}</div>
+</div>
+{{ footer }}
+

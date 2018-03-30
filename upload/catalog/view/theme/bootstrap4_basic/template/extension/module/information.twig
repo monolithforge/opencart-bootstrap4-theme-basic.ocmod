@@ -1,0 +1,20 @@
+{##
+/**
+ * @category   MonolithForge/OpenCart/Bootstrap4Basic
+ * @package    monolithforge-opencart-bootstrap4-basic
+ * @author     dev@monolithforge.com, @TODO
+ * @copyright  2018 Monolith Forge, LLC
+ * @license    https://www.monolithforge.com/license/boostrap4-basic-license.txt
+ * @version    3.0.2.0-bootstrap4-theme-basic-a2
+ */
+#}
+<div class="sidebar">
+  <ul class="nav nav-tabs nav-stacked">
+    {% for information in informations %}
+    <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+    {% endfor %}
+    <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+    <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+  </ul>
+</div>
+

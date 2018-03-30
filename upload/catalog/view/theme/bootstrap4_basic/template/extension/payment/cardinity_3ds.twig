@@ -1,0 +1,26 @@
+{##
+/**
+ * @category   MonolithForge/OpenCart/Bootstrap4Basic
+ * @package    monolithforge-opencart-bootstrap4-basic
+ * @author     dev@monolithforge.com, @TODO
+ * @copyright  2018 Monolith Forge, LLC
+ * @license    https://www.monolithforge.com/license/boostrap4-basic-license.txt
+ * @version    3.0.2.0-bootstrap4-theme-basic-a2
+ */
+#}
+{% if success %}
+<form id="cardinity-3ds-form" name="ThreeDForm" method="POST" action="{{ url }}">
+	<input type="hidden" name="PaReq" value="{{ PaReq }}" />
+	<input type="hidden" name="TermUrl" value="{{ TermUrl }}" />
+	<input type="hidden" name="MD" value="{{ MD }}" />
+</form>
+<script type="text/javascript"><!--
+$('#cardinity-3ds-form').submit();
+//--></script>
+{% endif %}
+{% if redirect %}
+<script type="text/javascript"><!--
+location = '{{ redirect }}';
+//--></script>
+{% endif %}
+
