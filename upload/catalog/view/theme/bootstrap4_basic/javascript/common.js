@@ -1,7 +1,7 @@
 /**
  * @category   MonolithForge/OpenCart/Bootstrap4Basic
  * @package    monolithforge-opencart-bootstrap4-basic
- * @author     dev@monolithforge.com, @TODO
+ * @author     dev@monolithforge.com
  * @copyright  2018 Monolith Forge, LLC
  * @license    https://www.monolithforge.com/license/boostrap4-basic-license.txt
  * @version    3.0.2.0-bootstrap4-theme-basic-a2-dev
