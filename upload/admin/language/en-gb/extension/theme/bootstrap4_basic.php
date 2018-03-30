@@ -6,7 +6,7 @@
  * @author     dev@monolithforge.com, @TODO
  * @copyright  2018 Monolith Forge, LLC
  * @license    https://www.monolithforge.com/license/boostrap4-basic-license.txt
- * @version    3.0.2.0-bootstrap4-theme-basic-a2
+ * @version    3.0.2.0-bootstrap4-theme-basic-a2-dev
  */
 // Heading
 $_['heading_title']                    = 'Bootstrap4 Basic Theme';
