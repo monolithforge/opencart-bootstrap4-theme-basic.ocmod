@@ -60,7 +60,7 @@ select.form-control, textarea.form-control, input[type="text"].form-control, inp
 .input-group input, .input-group select, .input-group .dropdown-menu, .input-group .popover {
 	font-size: 12px;
 }
-.input-group .input-group-addon {
+.input-group .input-group-prepend, .input-group .input-group-append {
 	font-size: 12px;
 	height: 30px;
 }

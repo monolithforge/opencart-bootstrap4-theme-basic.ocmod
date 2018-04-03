@@ -38,7 +38,7 @@
         </div>
         <div class="col-md-4 col-xs-6">
           <div class="form-group input-group input-group-sm">
-            <label class="input-group-addon" for="input-sort">{{ text_sort }}</label>
+            <label class="input-group-prepend" for="input-sort"><span class="input-group-text">{{ text_sort }}</span></label>
             <select id="input-sort" class="form-control" onchange="location = this.value;">
               
               {% for sorts in sorts %}
@@ -58,7 +58,7 @@
         </div>
         <div class="col-md-3 col-xs-6">
           <div class="form-group input-group input-group-sm">
-            <label class="input-group-addon" for="input-limit">{{ text_limit }}</label>
+            <label class="input-group-prepend" for="input-limit"><span class="input-group-text">{{ text_limit }}</span></label>
             <select id="input-limit" class="form-control" onchange="location = this.value;">
               
               {% for limits in limits %}
