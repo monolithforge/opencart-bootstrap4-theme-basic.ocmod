@@ -55,4 +55,3 @@ $_['error_image_compare']              = 'Compare Image Size dimensions required
 $_['error_image_wishlist']             = 'Wish List Image Size dimensions required!';
 $_['error_image_cart']                 = 'Cart Image Size dimensions required!';
 $_['error_image_location']             = 'Store Image Size dimensions required!';
-

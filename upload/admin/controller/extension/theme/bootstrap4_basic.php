@@ -392,4 +392,3 @@ class ControllerExtensionThemeBootstrap4Basic extends Controller {
 		return !$this->error;
 	}
 }
-
