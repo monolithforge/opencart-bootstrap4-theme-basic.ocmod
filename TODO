@@ -16,26 +16,19 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
   //'d-print' none found
 
 = Beta 3 changes
-  //'thumbnail-transition' none found
-
-  //Forms
-    //checkboxes and radios @TODO
-    //'background-image', 'custom-control-indicator', etc. @TODO
-    //data-toggle="buttons" @TODO
-    //'col-form-legend' @TODO
-    //'custom-file-text' @TODO
-  
-  //'input-group-addon' @FINISHED
-
 == Miscellaneous
   //'thumbnail-transition' none found
   //'node_modules' none found
 
 == Forms
-...@TODO
+  //checkboxes and radios @TODO
+  //'background-image', 'custom-control-indicator', etc. @TODO
+  //data-toggle="buttons" @TODO
+  //'col-form-legend' @TODO
+  //'custom-file-text' @TODO
 
 == Input groups
-...@TODO
+  //'input-group-addon' @FINISHED
 
 = Beta 2 changes
 ...@TODO
