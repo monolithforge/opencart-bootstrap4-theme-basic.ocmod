@@ -143,16 +143,20 @@ div.required .col-form-label:before {
 #search {
 	margin-bottom: 10px;
 }
-#search .form-control-lg {
+#search .form-control {
 	height: 40px;
 	line-height: 20px;
 	padding: 0 10px;
 }
-#search .btn-lg {
+#search .btn {
 	font-size: 15px;
 	line-height: 18px;
-	padding: 10px 35px;
+	padding: 18px 35px 20px 35px;
 	text-shadow: 0 1px 0 #FFF;
+}
+#search .btn i {
+  position:relative;
+  top:-7px;
 }
 /* cart */
 #cart {
