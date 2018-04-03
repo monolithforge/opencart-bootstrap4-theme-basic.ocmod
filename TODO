@@ -18,6 +18,24 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
 = Beta 3 changes
   //'thumbnail-transition' none found
 
+  //Forms
+    //checkboxes and radios @TODO
+    //'background-image', 'custom-control-indicator', etc. @TODO
+    //data-toggle="buttons" @TODO
+    //'col-form-legend' @TODO
+    //'custom-file-text' @TODO
+  
+  //'input-group-addon' found in:
+    upload/catalog/view/theme/bootstrap4_basic/stylesheet/stylesheet.css:.input-group .input-group-addon {
+    upload/catalog/view/theme/bootstrap4_basic/template/product/category.twig:            <label class="input-group-addon" for="input-sort">{{ text_sort }}</label>
+    upload/catalog/view/theme/bootstrap4_basic/template/product/category.twig:            <label class="input-group-addon" for="input-limit">{{ text_limit }}</label>
+    upload/catalog/view/theme/bootstrap4_basic/template/product/manufacturer_info.twig:            <label class="input-group-addon" for="input-sort">{{ text_sort }}</label>
+    upload/catalog/view/theme/bootstrap4_basic/template/product/manufacturer_info.twig:            <label class="input-group-addon" for="input-limit">{{ text_limit }}</label>
+    upload/catalog/view/theme/bootstrap4_basic/template/product/search.twig:            <label class="input-group-addon" for="input-sort">{{ text_sort }}</label>
+    upload/catalog/view/theme/bootstrap4_basic/template/product/search.twig:            <label class="input-group-addon" for="input-limit">{{ text_limit }}</label>
+    upload/catalog/view/theme/bootstrap4_basic/template/product/special.twig:            <label class="input-group-addon" for="input-sort">{{ text_sort }}</label>
+    upload/catalog/view/theme/bootstrap4_basic/template/product/special.twig:            <label class="input-group-addon" for="input-limit">{{ text_limit }}</label>
+
 == Miscellaneous
   //'thumbnail-transition' none found
   //'node_modules' none found
