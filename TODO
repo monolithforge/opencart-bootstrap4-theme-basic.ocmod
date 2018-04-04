@@ -669,9 +669,7 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
     
     //`radio-inline` @FINISHED
     
-    //`checkbox-inline` found in:
-    // upload/catalog/view/theme/bootstrap4_basic/template/product/search.twig:          <label class="checkbox-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/product/search.twig:        <label class="checkbox-inline">
+    //`checkbox-inline` @FINISHED
     
     // .checkbox and .radio @TODO?
     

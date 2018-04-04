@@ -57,23 +57,25 @@
           </select>
         </div>
         <div class="col-sm-3">
-          <label class="checkbox-inline">
+          <div class="form-check form-check-inline">
             {% if sub_category %}
-            <input type="checkbox" name="sub_category" value="1" checked="checked" />
+            <input class="form-check-input" type="checkbox" name="sub_category" value="1" checked="checked" />
             {% else %}
-            <input type="checkbox" name="sub_category" value="1" />
+            <input class="form-check-input" type="checkbox" name="sub_category" value="1" />
             {% endif %}
-            {{ text_sub_category }}</label>
+            <label class="form-check-label">{{ text_sub_category }}</label>
+          </div>
         </div>
       </div>
       <p>
-        <label class="checkbox-inline">
+        <div class="form-check form-check-inline">
           {% if description %}
-          <input type="checkbox" name="description" value="1" id="description" checked="checked" />
+          <input class="form-check-input" type="checkbox" name="description" value="1" id="description" checked>
           {% else %}
-          <input type="checkbox" name="description" value="1" id="description" />
+          <input class="form-check-input" type="checkbox" name="description" value="1" id="description" />
           {% endif %}
-          {{ entry_description }}</label>
+          <label class="form-check-label">{{ entry_description }}</label>
+        </div>
       </p>
       <input type="button" value="{{ button_search }}" id="button-search" class="btn btn-primary" />
       <h2>{{ text_search }}</h2>
