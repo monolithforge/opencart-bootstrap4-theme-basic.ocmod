@@ -667,36 +667,7 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
     
     // rename help-block to form-text @FINISHED
     
-    //`radio-inline` found in:
-    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:              <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:              <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:              <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:              <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/account/newsletter.twig:              <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/account/newsletter.twig:              <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/account/newsletter.twig:              <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/account/newsletter.twig:              <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:              <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:              <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:              <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:              <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:              <label class="radio-inline"> {% if opened %}
-    // upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:              <label class="radio-inline"> {% if not opened %}
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/bluepay_redirect.twig:					<label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/bluepay_redirect.twig:					<label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:          <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/cardconnect.twig:          <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_account.twig:        <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_account.twig:        <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_invoice.twig:        <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_invoice.twig:        <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:			<label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:			<label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_server.twig:        <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_server.twig:        <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_server.twig:        <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/worldpay.twig:		  <label class="radio-inline">
-    // upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/worldpay.twig:		  <label class="radio-inline">
+    //`radio-inline` @FINISHED
     
     //`checkbox-inline` found in:
     // upload/catalog/view/theme/bootstrap4_basic/template/product/search.twig:          <label class="checkbox-inline">
