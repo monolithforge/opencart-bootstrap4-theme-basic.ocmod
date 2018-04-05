@@ -676,17 +676,13 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
       upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:			<label class="radio-inline">@TODO need a testing account or something here to verify...
       upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:			<label class="radio-inline">@TODO ...
       
-      //.checkbox
-      upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:                <div class="checkbox"> {% if address_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id in address_custom_field[custom_field.custom_field_id] %}
-      upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:                <div class="checkbox">
-      upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:            <input type="checkbox" name="agree" value="1" checked="checked" />
-      upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:            <input type="checkbox" name="agree" value="1" />
-      upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:                <div class="checkbox">
-      upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:                <div class="checkbox">{% if register_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id in register_custom_field[custom_field.custom_field_id] %}
-      upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:            <input type="checkbox" name="agree" value="1" checked="checked" />
-      upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:            <input type="checkbox" name="agree" value="1" />
-      upload/catalog/view/theme/bootstrap4_basic/template/account/voucher.twig:            <input type="checkbox" name="agree" value="1" checked="checked" />
-      upload/catalog/view/theme/bootstrap4_basic/template/account/voucher.twig:            <input type="checkbox" name="agree" value="1" />
+      //.checkbox @TODO (@FINISHED almost)
+      upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:            @TODO DoubleCheck double-check
+      upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:             @TODO ... buttons
+      upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          @TODO ...
+      upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          @TODO ...
+      upload/catalog/view/theme/bootstrap4_basic/template/account/voucher.twig:              @TODO ...
+      
       upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:                <div class="checkbox">{% if register_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id in register_custom_field[custom_field.custom_field_id] %}
       upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:                  <div class="checkbox"> {% if register_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id == register_custom_field[custom_field.custom_field_id] %}
       upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:          <div class="checkbox"> {% if guest_custom_field[custom_field.custom_field_id] and  custom_field_value.custom_field_value_id in guest_custom_field[custom_field.custom_field_id] %}
