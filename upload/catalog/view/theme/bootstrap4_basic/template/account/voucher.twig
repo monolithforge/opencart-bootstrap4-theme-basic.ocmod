@@ -71,16 +71,14 @@
           <div class="col-sm-10">
            {% for voucher_theme in voucher_themes %}
             {% if voucher_theme.voucher_theme_id == voucher_theme_id %}
-            <div class="radio">
-              <label>
-                <input type="radio" name="voucher_theme_id" value="{{ voucher_theme.voucher_theme_id }}" checked="checked" />
-                {{ voucher_theme.name }}</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="voucher_theme_id" value="{{ voucher_theme.voucher_theme_id }}" checked>
+                <label class="form-check-label">{{ voucher_theme.name }}</label>
             </div>
             {% else %}
-            <div class="radio">
-              <label>
-                <input type="radio" name="voucher_theme_id" value="{{ voucher_theme.voucher_theme_id }}" />
-                {{ voucher_theme.name }}</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="voucher_theme_id" value="{{ voucher_theme.voucher_theme_id }}" />
+                <label class="form-check-label">{{ voucher_theme.name }}</label>
             </div>
             {% endif %}
             {% endfor %}

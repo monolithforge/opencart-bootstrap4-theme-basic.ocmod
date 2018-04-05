@@ -672,20 +672,6 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
     //`checkbox-inline` @FINISHED
     
     // .radio and .checkbox @TODO
-      upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:              <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:              <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:              <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:                <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:                <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/account/voucher.twig:            <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/account/voucher.twig:            <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:              <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:              <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:                <div class="radio"> {% if register_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id == register_custom_field[custom_field.custom_field_id] %}
-      upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:              <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:              <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:              <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:                  <div class="radio"> {% if register_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id == register_custom_field[custom_field.custom_field_id] %}
       upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:        <div class="radio">
       upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:        <div class="radio">
       upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:          <div class="radio"> {% if guest_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id == guest_custom_field[custom_field.custom_field_id] %}
