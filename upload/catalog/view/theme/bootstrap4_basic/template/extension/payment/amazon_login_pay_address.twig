@@ -80,15 +80,15 @@ $(document).ready(function() {
 						html += '<p><strong>' + shippingMethod.title + '</strong></p>';
 
 						$.each(shippingMethod.quote, function(i, quote) {
-							html += '<div class="radio">';
-							html += '<label>';
+							html += '<div class="form-check">';
 
 							if (data.selected == quote.code) {
-								html += '<input type="radio" name="shipping_method" value="' + quote.code + '" id="' + quote.code + '" checked="checked" />';
+								html += '<input class="form-check-input" type="radio" name="shipping_method" value="' + quote.code + '" id="' + quote.code + '" checked>';
 							} else {
-								html += '<input type="radio" name="shipping_method" value="' + quote.code + '" id="' + quote.code + '" />';
+								html += '<input class="form-check-input" type="radio" name="shipping_method" value="' + quote.code + '" id="' + quote.code + '">';
 							}
 
+							html += '<label class="form-check-label">';
 							html += quote.title + ' - ';
 							html += quote.text;
 							html += '</label>';

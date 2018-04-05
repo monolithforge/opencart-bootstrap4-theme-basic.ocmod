@@ -672,52 +672,11 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
     //`checkbox-inline` @FINISHED
     
     // .radio and .checkbox @TODO
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:        <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:        <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:          <div class="radio"> {% if guest_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id == guest_custom_field[custom_field.custom_field_id] %}
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:          <div class="radio"> {% if guest_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id == guest_custom_field[custom_field.custom_field_id] %}
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:        <div class="radio"> {% if address_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id == address_custom_field[custom_field.custom_field_id] %}
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/login.twig:    <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/login.twig:    <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:  <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:  <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:          <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_method.twig:<div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:        <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:        <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:          <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:          <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:  <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:  <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:          <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_method.twig:<div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/amazon_login_pay_address.twig:							html += '<div class="radio">';
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/eway.twig:            <input type="radio" name="EWAY_PAYMENTTYPE" id="eway-radio-cc" value="creditcard" checked="checked" onchange="javascript:select_eWAYPaymentOption('creditcard')" />
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/eway.twig:            <input type="radio" name="EWAY_PAYMENTTYPE" value="paypal" onchange="javascript:select_eWAYPaymentOption(paypal)" />
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/eway.twig:            <input type="radio" name="EWAY_PAYMENTTYPE" value="masterpass" onchange="javascript:select_eWAYPaymentOption(masterpass)" />
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/eway.twig:	      if ($('#eway-radio-cc').is(':checked')) {
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/firstdata.twig:      <input type="radio" name="hosteddataid" value="{{ card.token }}"{% if i == 1 %} checked="checked"{% endif %} />
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/firstdata.twig:      <input type="radio" name="hosteddataid" value="{{ new_hosted_id }}" {% set i == 1 %} checked="checked"{% endif %} />
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/firstdata_remote.twig:          <p><input type="radio" name="cc_choice" value="{{ card.token }}" class="stored_card" {% if i == 0 %} checked="checked"{% endif %} /> {{ card.card_type }} xxxx {{ card.digits }}, {{ entry_cc_expire_date }}  {{ card.expire_month }} / {{ card.expire_year }}</p>
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/firstdata_remote.twig:        <p><input type="radio" name="cc_choice" value="new" class="stored_card" />New card</p>
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/klarna_checkout_sidebar.twig:  <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_braintree.twig:        <input type="radio" name="vaulted_payment_method" class="pull-right vaulted-card" value="{{ vaulted_payment_method.token }}" />
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_braintree.twig:      <div class="col-sm-1"><input type="radio" name="vaulted_payment_method" class="pull-right" value="{{ vaulted_payment_method.token }}"/></div>
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_braintree_confirm.twig:                  <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_express_confirm.twig:          <div class="radio">
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:			<label class="radio-inline">
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:			<label class="radio-inline">
-      upload/catalog/view/theme/bootstrap4_basic/template/extension/total/shipping.twig:							html += '<div class="radio">';
-      upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:                    <input type="radio" name="rating" value="1" />
-      upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:                    <input type="radio" name="rating" value="2" />
-      upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:                    <input type="radio" name="rating" value="3" />
-      upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:                    <input type="radio" name="rating" value="4" />
-      upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:                    <input type="radio" name="rating" value="5" />
-      upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:                <div class="radio">
+      //.radio @TODO (@FINISHED almost)
+      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:			<label class="radio-inline">@TODO need a testing account or something here to verify...
+      upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/sagepay_direct.twig:			<label class="radio-inline">@TODO ...
       
-      
-      
-      
+      //.checkbox
       upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:                <div class="checkbox"> {% if address_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id in address_custom_field[custom_field.custom_field_id] %}
       upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:                <div class="checkbox">
       upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:            <input type="checkbox" name="agree" value="1" checked="checked" />

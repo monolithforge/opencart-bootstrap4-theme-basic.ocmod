@@ -12,22 +12,22 @@
   <div class="col-sm-6">
     <h2>{{ text_new_customer }}</h2>
     <p>{{ text_checkout }}</p>
-    <div class="radio">
-      <label> {% if account == 'register' %}
-        <input type="radio" name="account" value="register" checked="checked" />
-        {% else %}
-        <input type="radio" name="account" value="register" />
-        {% endif %}
-        {{ text_register }}</label>
+    <div class="form-check">
+      {% if account == 'register' %}
+      <input class="form-check-input" type="radio" name="account" value="register" checked>
+      {% else %}
+      <input class="form-check-input" type="radio" name="account" value="register">
+      {% endif %}
+      <label class="form-check-label">{{ text_register }}</label>
     </div>
     {% if checkout_guest %}
-    <div class="radio">
-      <label> {% if account == 'guest' %}
-        <input type="radio" name="account" value="guest" checked="checked" />
-        {% else %}
-        <input type="radio" name="account" value="guest" />
-        {% endif %}
-        {{ text_guest }}</label>
+    <div class="form-check">
+      {% if account == 'guest' %}
+      <input class="form-check-input" type="radio" name="account" value="guest" checked>
+      {% else %}
+      <input class="form-check-input" type="radio" name="account" value="guest">
+      {% endif %}
+      <label class="form-check-label">{{ text_guest }}</label>
     </div>
     {% endif %}
     <p>{{ text_register_account }}</p>

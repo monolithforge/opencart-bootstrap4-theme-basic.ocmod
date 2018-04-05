@@ -14,17 +14,18 @@
 {% if payment_methods %}
 <p>{{ text_payment_method }}</p>
 {% for payment_method in payment_methods %}
-<div class="radio">
-  <label>{% if payment_method.code == code or not code %}
-    {% set code = payment_method.code %}
-    <input type="radio" name="payment_method" value="{{ payment_method.code }}" checked="checked" />
-    {% else %}
-    <input type="radio" name="payment_method" value="{{ payment_method.code }}" />
-    {% endif %}
-    {{ payment_method.title }}
-    {% if payment_method.terms %}
-    ({{ payment_method.terms }})
-    {% endif %} </label>
+<div class="form-check">
+  {% if payment_method.code == code or not code %}
+  {% set code = payment_method.code %}
+  <input class="form-check-input" type="radio" name="payment_method" value="{{ payment_method.code }}" checked>
+  {% else %}
+  <input class="form-check-input" type="radio" name="payment_method" value="{{ payment_method.code }}">
+  {% endif %}
+  <label class="form-check-label">
+  {{ payment_method.title }}
+  {% if payment_method.terms %}
+  ({{ payment_method.terms }})
+  {% endif %} </label>
 </div>
 {% endfor %}
 {% endif %}

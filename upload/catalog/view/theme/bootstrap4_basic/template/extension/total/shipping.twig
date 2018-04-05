@@ -98,15 +98,15 @@ $('#button-quote').on('click', function() {
 
 					if (!json['shipping_method'][i]['error']) {
 						for (j in json['shipping_method'][i]['quote']) {
-							html += '<div class="radio">';
-							html += '  <label>';
+							html += '<div class="form-check">';
 
 							if (json['shipping_method'][i]['quote'][j]['code'] == '{{ shipping_method }}') {
-								html += '<input type="radio" name="shipping_method" value="' + json['shipping_method'][i]['quote'][j]['code'] + '" checked="checked" />';
+								html += '<input class="form-check-input" type="radio" name="shipping_method" value="' + json['shipping_method'][i]['quote'][j]['code'] + '" checked>';
 							} else {
-								html += '<input type="radio" name="shipping_method" value="' + json['shipping_method'][i]['quote'][j]['code'] + '" />';
+								html += '<input class="form-check-input" type="radio" name="shipping_method" value="' + json['shipping_method'][i]['quote'][j]['code'] + '">';
 							}
 
+							html += '<label>';
 							html += json['shipping_method'][i]['quote'][j]['title'] + ' - ' + json['shipping_method'][i]['quote'][j]['text'] + '</label></div>';
 						}
 					} else {
