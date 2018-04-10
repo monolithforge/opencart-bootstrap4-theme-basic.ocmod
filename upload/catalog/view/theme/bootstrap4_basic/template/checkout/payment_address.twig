@@ -131,10 +131,9 @@
       <div class="col-sm-10">
         <div id="input-payment-custom-field{{ custom_field.custom_field_id }}">
           {% for custom_field_value in custom_field.custom_field_value %}
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="custom_field[{{ custom_field.location }}][{{ custom_field.custom_field_id }}][]" value="{{ custom_field_value.custom_field_value_id }}" />
-              {{ custom_field_value.name }}</label>
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="custom_field[{{ custom_field.location }}][{{ custom_field.custom_field_id }}][]" value="{{ custom_field_value.custom_field_value_id }}">
+              <label class="form-check-label">{{ custom_field_value.name }}</label>
           </div>
           {% endfor %}
         </div>
