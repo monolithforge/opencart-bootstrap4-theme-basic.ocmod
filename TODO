@@ -21,7 +21,7 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
   //'node_modules' none found
 
 == Forms
-  //checkboxes and radios @TODO
+  //checkboxes and radios @SEEBELOW
   //'background-image', 'custom-control-indicator', etc. @TODO
   //data-toggle="buttons" @TODO
   //'col-form-legend' @TODO
