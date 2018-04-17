@@ -713,8 +713,6 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
   
   //Dropdowns
   
-  //nav-tabs @TODO
-  upload/catalog/view/theme/bootstrap4_basic/stylesheet/stylesheet.css:.nav-tabs {
-  upload/catalog/view/theme/bootstrap4_basic/template/extension/module/information.twig:  <ul class="nav nav-tabs nav-stacked">
-  upload/catalog/view/theme/bootstrap4_basic/template/extension/payment/pp_braintree.twig:  <ul class="nav nav-tabs">
-  upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:          <ul class="nav nav-tabs">
+  //nav-tabs @TODO (nav-stacked as well)
+    //found in:
+    //upload/catalog/view/theme/bootstrap4_basic/template/extension/module/information.twig:  <ul class="nav nav-tabs nav-stacked"> @TODO this twig doesn't seem to be used anywhere (unless I'm missing something?), but we need to fix nav-stacked along with nav-tabs here...

@@ -42,12 +42,12 @@
           </ul>
           {% endif %}
           <ul class="nav nav-tabs">
-            <li class="active"><a href="#tab-description" data-toggle="tab">{{ tab_description }}</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#tab-description" data-toggle="tab">{{ tab_description }}</a></li>
             {% if attribute_groups %}
-            <li><a href="#tab-specification" data-toggle="tab">{{ tab_attribute }}</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tab-specification" data-toggle="tab">{{ tab_attribute }}</a></li>
             {% endif %}
             {% if review_status %}
-            <li><a href="#tab-review" data-toggle="tab">{{ tab_review }}</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tab-review" data-toggle="tab">{{ tab_review }}</a></li>
             {% endif %}
           </ul>
           <div class="tab-content">

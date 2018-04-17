@@ -14,8 +14,8 @@
   {% if vaulted_payment_count > 0 %}
   <input type="hidden" name="payment_type" value="saved" id="tab-option" />
   <ul class="nav nav-tabs">
-    <li role="presentation" id="tab-saved" class="active"><a href="#" class="braintree-tab-link braintree-button" id="saved-link">{{ entry_saved_methods }}</a></li>
-    <li role="presentation" id="tab-new"><a href="#" class="braintree-tab-link braintree-button" id="new-link">{{ entry_new }}</a></li>
+    <li role="presentation" id="tab-saved" class="nav-item"><a href="#" class="nav-link braintree-tab-link braintree-button active" id="saved-link">{{ entry_saved_methods }}</a></li>
+    <li role="presentation" id="tab-new" class="nav-item"><a href="#" class="nav-link braintree-tab-link braintree-button" id="new-link">{{ entry_new }}</a></li>
   </ul>
   {% endif %}
 </div>
@@ -142,14 +142,14 @@
 
     if ($(this).attr('id') == 'saved-link') {
       $('#tab-option').val('saved');
-      $('#tab-saved').addClass('active');
-      $('#tab-new').removeClass('active');
+      $('#saved-link').addClass('active');
+      $('#new-link').removeClass('active');
       $('#braintree-vaulted').show();
       $('#braintree-new').hide();
     } else {
       $('#tab-option').val('new');
-      $('#tab-new').addClass('active');
-      $('#tab-saved').removeClass('active');
+      $('#new-link').addClass('active');
+      $('#saved-link').removeClass('active');
       $('#braintree-vaulted').hide();
       $('#braintree-new').show();
     }
