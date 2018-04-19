@@ -13,4 +13,7 @@ Official Git URL: https://gitlab.com/MonolithForge/opencart-bootstrap4-theme-bas
  
 Changelog:
 
-...
+3.0.2.0-bootstrap4-theme-basic-a2-dev
+    update vendors:
+        bootstrap-datetimepicker 4.17.47
+        moment 2.22.1
