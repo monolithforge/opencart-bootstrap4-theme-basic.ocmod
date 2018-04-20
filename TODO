@@ -212,4 +212,5 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
         upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:$('.date').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:$('.datetime').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:$('.time').datetimepicker({
+     magnific-popup? @TODO
      
