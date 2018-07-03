@@ -178,9 +178,9 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
 
  // jquery extras
      datetimepicker @TODO (use tempusdominus/bootstrap-4 (datetimepicker) for temporary fix... needs rewrite...)
-        upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.date').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.datetime').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.time').datetimepicker({
+        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.date').datetimepicker({
+        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.datetime').datetimepicker({
+        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.time').datetimepicker({
         
         upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.date').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.datetime').datetimepicker({
