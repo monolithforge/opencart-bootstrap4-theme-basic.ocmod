@@ -4,7 +4,7 @@
  * @author     dev@monolithforge.com
  * @copyright  2018 Monolith Forge, LLC
  * @license    https://www.monolithforge.com/license/opencart-bootstrap4-theme-basic.txt
- * @version    3.0.2.0-bootstrap4-theme-basic-a2-dev
+ * @version    3.0.2.0-bootstrap4-theme-basic-a2
  */
  
 Start migrating using this doc: https://getbootstrap.com/docs/4.0/migration/
@@ -181,31 +181,41 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
         upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.date').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.datetime').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.time').datetimepicker({
+        
         upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.date').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.datetime').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.time').datetimepicker({
+        
         upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:$('.date').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:$('.datetime').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:$('.time').datetimepicker({
+        
         upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:$('.date').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:$('.time').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:$('.datetime').datetimepicker({
+        
         upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:$('.date').datetimepicker({
+        
         upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('.date').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('.time').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('.datetime').datetimepicker({
+        
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.date').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.time').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.datetime').datetimepicker({
+        
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:$('.date').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:$('.time').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:$('.datetime').datetimepicker({
+        
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:$('.date').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:$('.time').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:$('.datetime').datetimepicker({
+        
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:$('.date').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:$('.time').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:$('.datetime').datetimepicker({
+        
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:$('.date').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:$('.time').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:$('.datetime').datetimepicker({
@@ -214,4 +224,3 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
         @FIXED upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:$('.datetime').datetimepicker({
         @FIXED upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:$('.time').datetimepicker({
      magnific-popup? @TODO
-     
