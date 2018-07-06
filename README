@@ -13,6 +13,10 @@ Official Git URL: https://gitlab.com/MonolithForge/opencart-bootstrap4-theme-bas
  
 Changelog:
 
+3.0.2.0-bootstrap4-theme-basic-a3
+    bootstrap-datetimepicker (tempusdominus/bootstrap-4) 5.0.0
+        -fixed account/affiliate-register address custom date/time/datetime fields
+
 3.0.2.0-bootstrap4-theme-basic-a2
     update vendors:
         bootstrap-datetimepicker (tempusdominus/bootstrap-4) 5.0.0
