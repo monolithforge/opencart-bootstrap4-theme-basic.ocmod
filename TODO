@@ -181,21 +181,21 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
         @FIXED = bootstrap selects and works visually
         @VERIFYSAVED models save and display saved values
         
-        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.date').datetimepicker({
-        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.datetime').datetimepicker({
-        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.time').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.date').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.datetime').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.time').datetimepicker({
         
         upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.date').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.datetime').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.time').datetimepicker({
         
-        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:$('.date').datetimepicker({
-        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:$('.datetime').datetimepicker({
-        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:$('.time').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:$('.date').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:$('.datetime').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:$('.time').datetimepicker({
         
-        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:$('.date').datetimepicker({
-        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:$('.time').datetimepicker({
-        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:$('.datetime').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:$('.date').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:$('.time').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:$('.datetime').datetimepicker({
         
         upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:$('.date').datetimepicker({
         
@@ -203,25 +203,25 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
         upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('.time').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('.datetime').datetimepicker({
         
-        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.date').datetimepicker({
-        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.time').datetimepicker({
-        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.datetime').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.date').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.time').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.datetime').datetimepicker({
         
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:$('.date').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:$('.time').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:$('.datetime').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:$('.date').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:$('.time').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:$('.datetime').datetimepicker({
         
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:$('.date').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:$('.time').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:$('.datetime').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:$('.date').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:$('.time').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:$('.datetime').datetimepicker({
         
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:$('.date').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:$('.time').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:$('.datetime').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:$('.date').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:$('.time').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:$('.datetime').datetimepicker({
         
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:$('.date').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:$('.time').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:$('.datetime').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:$('.date').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:$('.time').datetimepicker({
+        @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:$('.datetime').datetimepicker({
         
         @FIXED upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:$('.date').datetimepicker({
         @FIXED upload/catalog/view/theme/bootstrap4_basic/template/product/product.twig:$('.datetime').datetimepicker({
