@@ -34,11 +34,11 @@
         <div class="{{ class }}"> {% if thumb or images %}
           <ul class="thumbnails">
             {% if thumb %}
-            <li><a href="{{ popup }}" title="{{ heading_title }}"><img class="img-thumbnail" src="{{ thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}" /></a></li>
+            <li><a class="thumbnail" href="{{ popup }}" title="{{ heading_title }}"><img src="{{ thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}" /></a></li>
             {% endif %}
             {% if images %}
             {% for image in images %}
-            <li class="image-additional"><a href="{{ image.popup }}" title="{{ heading_title }}"> <img class="img-thumbnail" src="{{ image.thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}" /></a></li>
+            <li class="image-additional"><a class="thumbnail" href="{{ image.popup }}" title="{{ heading_title }}"> <img src="{{ image.thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}" /></a></li>
             {% endfor %}
             {% endif %}
           </ul>
@@ -242,31 +242,49 @@
             {% if option.type == 'date' %}
             <div class="form-group row{% if option.required %} required {% endif %}">
               <label class="col-form-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
-              <div class="input-group date">
-                <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" data-date-format="YYYY-MM-DD" id="input-option{{ option.product_option_id }}" class="form-control" />
-                <span class="input-group-btn">
-                <button class="btn btn-secondary" type="button"><i class="fa fa-calendar"></i></button>
+              <div class="input-group date" id="option_cal_{{ option.product_option_id }}" data-target-input="nearest">
+                <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" class="form-control datetimepicker-input" data-target="#option_cal_{{ option.product_option_id }}" />
+                <span class="input-group-append" data-target="#option_cal_{{ option.product_option_id }}" data-toggle="datetimepicker">
+                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                 </span></div>
+                <script type="text/javascript"><!--
+                $("#option_cal_{{ option.product_option_id }}").datetimepicker({
+                    locale: '{{ datepicker }}',
+                    format: 'YYYY-MM-DD'
+                });
+                --></script>
             </div>
             {% endif %}
             {% if option.type == 'datetime' %}
             <div class="form-group row{% if option.required %} required {% endif %}">
               <label class="col-form-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
-              <div class="input-group datetime">
-                <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" data-date-format="YYYY-MM-DD HH:mm" id="input-option{{ option.product_option_id }}" class="form-control" />
-                <span class="input-group-btn">
-                <button type="button" class="btn btn-secondary"><i class="fa fa-calendar"></i></button>
+              <div class="input-group datetime" id="option_cal_{{ option.product_option_id }}" data-target-input="nearest">
+                <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" class="form-control datetimepicker-input" data-target="#option_cal_{{ option.product_option_id }}" />
+                <span class="input-group-append" data-target="#option_cal_{{ option.product_option_id }}" data-toggle="datetimepicker">
+                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                 </span></div>
+                <script type="text/javascript"><!--
+                $("#option_cal_{{ option.product_option_id }}").datetimepicker({
+                    locale: '{{ datepicker }}',
+                    format: 'YYYY-MM-DD HH:mm'
+                });
+                --></script>
             </div>
             {% endif %}
             {% if option.type == 'time' %}
             <div class="form-group row{% if option.required %} required {% endif %}">
               <label class="col-form-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
-              <div class="input-group time">
-                <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" data-date-format="HH:mm" id="input-option{{ option.product_option_id }}" class="form-control" />
-                <span class="input-group-btn">
-                <button type="button" class="btn btn-secondary"><i class="fa fa-calendar"></i></button>
+              <div class="input-group date" id="option_cal_{{ option.product_option_id }}" data-target-input="nearest">
+                <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" class="form-control datetimepicker-input" data-target="#option_cal_{{ option.product_option_id }}" />
+                <span class="input-group-append" data-target="#option_cal_{{ option.product_option_id }}" data-toggle="datetimepicker">
+                <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
                 </span></div>
+                <script type="text/javascript"><!--
+                $("#option_cal_{{ option.product_option_id }}").datetimepicker({
+                    locale: '{{ datepicker }}',
+                    format: 'HH:mm'
+                });
+                --></script>
             </div>
             {% endif %}
             {% endfor %}
@@ -437,21 +455,6 @@ $('#button-cart').on('click', function() {
 });
 //--></script> 
 <script type="text/javascript"><!--
-$('.date').datetimepicker({
-	language: '{{ datepicker }}',
-	pickTime: false
-});
-
-$('.datetime').datetimepicker({
-	language: '{{ datepicker }}',
-	pickDate: true,
-	pickTime: true
-});
-
-$('.time').datetimepicker({
-	language: '{{ datepicker }}',
-	pickDate: false
-});
 
 $('button[id^=\'button-upload\']').on('click', function() {
 	var node = this;
