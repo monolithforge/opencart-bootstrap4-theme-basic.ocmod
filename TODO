@@ -185,9 +185,10 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
         @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.datetime').datetimepicker({
         @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:$('.time').datetimepicker({
         
-        upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.date').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.datetime').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.time').datetimepicker({
+        ## @TODO need to add to controller the datetimepicker files.  The model doesn't save either.
+        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.date').datetimepicker({
+        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.datetime').datetimepicker({
+        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:$('.time').datetimepicker({
         
         @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:$('.date').datetimepicker({
         @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:$('.datetime').datetimepicker({
@@ -197,11 +198,12 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
         @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:$('.time').datetimepicker({
         @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:$('.datetime').datetimepicker({
         
+        @TODO can't find screen in frontend view :(
         upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:$('.date').datetimepicker({
         
-        upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('.date').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('.time').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('.datetime').datetimepicker({
+        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('.date').datetimepicker({
+        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('.time').datetimepicker({
+        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('.datetime').datetimepicker({
         
         @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.date').datetimepicker({
         @FIXED @VERIFYSAVED upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.time').datetimepicker({
