@@ -9,8 +9,9 @@
  */
 #}
 <div id="cart" class="btn-group btn-block btn-group-lg">
+  <div class="dropdown">
   <button type="button" data-toggle="dropdown" data-loading-text="{{ text_loading }}" class="btn btn-dark btn-block btn-lg dropdown-toggle"><i class="fa fa-shopping-cart"></i> <span id="cart-total">{{ text_items }}</span></button>
-  <ul class="dropdown-menu pull-right">
+  <ul class="dropdown-menu dropdown-menu-right">
     {% if products or vouchers %}
     <li>
       <table class="table table-striped">
@@ -58,4 +59,5 @@
     </li>
     {% endif %}
   </ul>
+  </div>
 </div>
