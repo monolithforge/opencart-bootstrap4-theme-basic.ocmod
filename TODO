@@ -203,9 +203,9 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
         upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('.time').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:$('.datetime').datetimepicker({
         
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.date').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.time').datetimepicker({
-        upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.datetime').datetimepicker({
+        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.date').datetimepicker({
+        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.time').datetimepicker({
+        @FIXED upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest.twig:$('.datetime').datetimepicker({
         
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:$('.date').datetimepicker({
         upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:$('.time').datetimepicker({
