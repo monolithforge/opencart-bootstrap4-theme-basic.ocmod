@@ -215,6 +215,10 @@ body {
 #menu > div > ul > li.nav-item > a {
     color:#fff;
 }
+/* legacy 3.0 no-caret look for #menu */
+#menu .dropdown-toggle::after {
+    display:none;
+}
 /*#menu {*/
 /*	background-color: #229ac8;*/
 /*	background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);*/
