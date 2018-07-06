@@ -7,9 +7,14 @@
  * @version    3.0.2.0-bootstrap4-theme-basic-a3-dev
  */
 
-$blue: #23a1d1;
+/*
+NOTE: currently there isn't an automatic build for this file.  Instead, it's pretty easy to alter this file and head on over to https://bootstrap.build/ and import it there.
+  After importing, one can download their bootstrap.min.css etc ;-)
+*/
+
+$blue: #23a1d1; //OpenCart.com (official blue?)
 
 $breadcrumb-divider: quote(">");
 
-/* fontawesome fa-angle-right */
+/* fontawesome fa-angle-right. @TODO for https://bootstrap.build/ I can't get this to work over there? (the above works though for $breadcrumb-divider!) */
 //$breadcrumb-divider: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAABQCAYAAADlVX69AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAaxJREFUaIHt2LtKA0EUxvHvTAwqpg1q0AcJiCDJFiq2CjYSYwqfwodIOpUQbe1ExQsEwc7Swl4lRn0AMSQZi1zMZbPZ3Zkzhcy/2tkd+A3sFssBbDabzWaz2WyDUeciXi7Eoo2pM0AuNYn2q6m9U1Y0Xi7EovXJCxAtAwCklAAyFSdXYkFnr09mIuLnsgt2YoRFRNS2hkAAICIAxcTt4Y52VEA8Sim/XZ8yweLN2X0iSRsm4e7Xm7g5SkmS50Q07bpT4zum3oUpmAZvmICHUBOwK8oNj0Q5YU+UCx6LcsC+UN2wb1QnHAjVBQdGdcChUFU4NKoCK6FhYWXUL9wksV5NZ68AQOhAK9HXewI9jNxARASZ7CzV0fLBRKKxWALB8dj1LGuU755BCwhse4F1yJXPdO5DHQ0JhkcVwHCoIhgc1QAGQzWB/lGNoD9UMzgeZQC9USZwNMoIuqPM4DBqAOxHDYF/qEGwhRoGAUDM1xc2TYIAIADx0v55MgICgHh3sg8AMi4wCwj0Djpa05Nie5rCBvahADB3d7xKkElZo3x1LfvFAdpsNpvN9g/7BVF3mANvS2AdAAAAAElFTkSuQmCC);
