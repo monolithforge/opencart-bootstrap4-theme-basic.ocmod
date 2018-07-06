@@ -34,11 +34,11 @@
         <div class="{{ class }}"> {% if thumb or images %}
           <ul class="thumbnails">
             {% if thumb %}
-            <li><a class="thumbnail" href="{{ popup }}" title="{{ heading_title }}"><img src="{{ thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}" /></a></li>
+            <li><a href="{{ popup }}" title="{{ heading_title }}"><img class="img-fluid border mb-2 col-12" src="{{ thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}" /></a></li>
             {% endif %}
             {% if images %}
             {% for image in images %}
-            <li class="image-additional"><a class="thumbnail" href="{{ image.popup }}" title="{{ heading_title }}"> <img src="{{ image.thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}" /></a></li>
+            <li class="image-additional"><a href="{{ image.popup }}" title="{{ heading_title }}"> <img class="img-thumbnail" src="{{ image.thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}" /></a></li>
             {% endfor %}
             {% endif %}
           </ul>
