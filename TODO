@@ -154,7 +154,7 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
     //form-control-static none found
     
   //Buttons
-    //rename btn-default to btn-secondary @FINISHED
+    //rename btn-default to btn-secondary @FINISHED (@TODO convert mostly to btn-light with sensible border to match legacy look/feel)
     
     //btn-xs found in:
     // upload/catalog/view/theme/bootstrap4_basic/stylesheet/stylesheet.css:.btn-xs {

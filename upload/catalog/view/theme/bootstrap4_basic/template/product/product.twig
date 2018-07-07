@@ -129,8 +129,8 @@
         {% endif %}
         <div class="{{ class }}">
           <div class="btn-group">
-            <button type="button" data-toggle="tooltip" class="btn btn-secondary" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product_id }}');"><i class="fa fa-heart"></i></button>
-            <button type="button" data-toggle="tooltip" class="btn btn-secondary" title="{{ button_compare }}" onclick="compare.add('{{ product_id }}');"><i class="fa fa-exchange"></i></button>
+            <button type="button" data-toggle="tooltip" class="btn btn-light border" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product_id }}');"><i class="fa fa-heart"></i></button>
+            <button type="button" data-toggle="tooltip" class="btn btn-light border" title="{{ button_compare }}" onclick="compare.add('{{ product_id }}');"><i class="fa fa-exchange"></i></button>
           </div>
           <h1>{{ heading_title }}</h1>
           <ul class="list-unstyled">
@@ -235,7 +235,7 @@
             {% if option.type == 'file' %}
             <div class="form-group{% if option.required %} required {% endif %}">
               <label class="col-form-label">{{ option.name }}</label>
-              <button type="button" id="button-upload{{ option.product_option_id }}" data-loading-text="{{ text_loading }}" class="btn btn-secondary btn-block"><i class="fa fa-upload"></i> {{ button_upload }}</button>
+              <button type="button" id="button-upload{{ option.product_option_id }}" data-loading-text="{{ text_loading }}" class="btn btn-light border btn-block"><i class="fa fa-upload"></i> {{ button_upload }}</button>
               <input type="hidden" name="option[{{ option.product_option_id }}]" value="" id="input-option{{ option.product_option_id }}" />
             </div>
             {% endif %}
@@ -353,7 +353,7 @@
                 {% else %} <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span> {% endif %}
                 {% if product.tax %} <span class="price-tax">{{ text_tax }} {{ product.tax }}</span> {% endif %} </p>
               {% endif %} </div>
-            <div class="button-group">
+            <div class="button-group border-top bg-light text-center">
               <button type="button" class="btn btn-light" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><span class="hidden-xs hidden-sm hidden-md">{{ button_cart }}</span> <i class="fa fa-shopping-cart"></i></button>
               <button type="button" class="btn btn-light" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');"><i class="fa fa-heart"></i></button>
               <button type="button" class="btn btn-light" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');"><i class="fa fa-exchange"></i></button>
