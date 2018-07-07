@@ -188,9 +188,14 @@ body {
 #cart .dropdown-menu {
 	min-width: 100%;
 }
-#cart > button.dropdown-toggle::after {
-    display:none
+/*#cart > button.dropdown-toggle::after {*/
+/*    display:none*/
+/*}*/
+/* legacy 3.0 no-caret look for #menu */
+#cart .dropdown-toggle::after {
+    display:none;
 }
+
 @media (max-width: 478px) {
 	#cart .dropdown-menu {
 		width: 100%;
@@ -211,14 +216,34 @@ body {
 #cart .dropdown-menu li p {
 	margin: 20px 0;
 }
+
 /* menu */
-#menu > div > ul > li.nav-item > a {
+
+/* BEGIN legacy 3.0 hover example look/feel for #menu */
+
+#menu .nav-link {
     color:#fff;
 }
+
 /* legacy 3.0 no-caret look for #menu */
 #menu .dropdown-toggle::after {
     display:none;
 }
+
+/* legacy auto hover look */
+#menu .dropdown:hover > .dropdown-menu {
+    display: block;
+}
+#menu .dropdown > .dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+#menu .nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+/* END legacy 3.0 hover look/feel for #menu */
+
 /*#menu {*/
 /*	background-color: #229ac8;*/
 /*	background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);*/
