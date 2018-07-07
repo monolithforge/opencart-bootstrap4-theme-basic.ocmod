@@ -72,11 +72,11 @@ body {
 /*.nav-tabs {*/
 /*	margin-bottom: 15px;*/
 /*}*/
-/*div.required .col-form-label:before {*/
-/*	content: '* ';*/
-/*	color: #F00;*/
-/*	font-weight: bold;*/
-/*}*/
+.required .col-form-label:before {
+	content: '* ';
+	color: #F00;
+	font-weight: bold;
+}
 /* Gradent to all drop down menus */
 /*.dropdown-menu li > a:hover {*/
 /*	text-decoration: none;*/
