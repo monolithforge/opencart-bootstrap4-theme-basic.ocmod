@@ -81,20 +81,20 @@
                 <div id="review"></div>
                 <h2>{{ text_write }}</h2>
                 {% if review_guest %}
-                <div class="form-group row required">
+                <div class="form-group required">
                   <div class="col-sm-12">
                     <label class="col-form-label" for="input-name">{{ entry_name }}</label>
                     <input type="text" name="name" value="{{ customer_name }}" id="input-name" class="form-control" />
                   </div>
                 </div>
-                <div class="form-group row required">
+                <div class="form-group required">
                   <div class="col-sm-12">
                     <label class="col-form-label" for="input-review">{{ entry_review }}</label>
                     <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
                     <div class="form-text">{{ text_note }}</div>
                   </div>
                 </div>
-                <div class="form-group row required">
+                <div class="form-group required">
                   <div class="col-sm-12">
                     <label class="col-form-label">{{ entry_rating }}</label>
                     &nbsp;&nbsp;&nbsp; {{ entry_bad }}&nbsp;
@@ -176,7 +176,7 @@
             <h3>{{ text_option }}</h3>
             {% for option in options %}
             {% if option.type == 'select' %}
-            <div class="form-group row{% if option.required %} required {% endif %}">
+            <div class="form-group{% if option.required %} required {% endif %}">
               <label class="col-form-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
               <select name="option[{{ option.product_option_id }}]" id="input-option{{ option.product_option_id }}" class="form-control">
                 <option value="">{{ text_select }}</option>
@@ -190,12 +190,12 @@
             </div>
             {% endif %}
             {% if option.type == 'radio' %}
-            <div class="form-group row{% if option.required %} required {% endif %}">
-              <label class="col-form-label">{{ option.name }}</label>
+            <div class="form-group{% if option.required %} required {% endif %}">
+              <legend class="col-form-label">{{ option.name }}</legend>
               <div id="input-option{{ option.product_option_id }}"> {% for option_value in option.product_option_value %}
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="option[{{ option.product_option_id }}]" value="{{ option_value.product_option_value_id }}">
-                  <label class="form-check-label">
+                  <input class="form-check-input" id="option-{{ option.product_option_id }}-{{ option_value.product_option_value_id }}" type="radio" name="option[{{ option.product_option_id }}]" value="{{ option_value.product_option_value_id }}">
+                  <label class="form-check-label" for="option-{{ option.product_option_id }}-{{ option_value.product_option_value_id }}">
                   {% if option_value.image %} <img src="{{ option_value.image }}" alt="{{ option_value.name }} {% if option_value.price %} {{ option_value.price_prefix }} {{ option_value.price }} {% endif %}" class="img-thumbnail" /> {% endif %}                  
                   {{ option_value.name }}
                   {% if option_value.price %}
@@ -206,12 +206,12 @@
             </div>
             {% endif %}
             {% if option.type == 'checkbox' %}
-            <div class="form-group row{% if option.required %} required {% endif %}">
-              <label class="col-form-label">{{ option.name }}</label>
+            <div class="form-group{% if option.required %} required {% endif %}">
+              <legend class="col-form-label">{{ option.name }}</legend>
               <div id="input-option{{ option.product_option_id }}"> {% for option_value in option.product_option_value %}
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="option[{{ option.product_option_id }}][]" value="{{ option_value.product_option_value_id }}">
-                    <label class="form-check-label">{% if option_value.image %} <img src="{{ option_value.image }}" alt="{{ option_value.name }} {% if option_value.price %} {{ option_value.price_prefix }} {{ option_value.price }} {% endif %}" class="img-thumbnail" /> {% endif %}
+                    <input class="form-check-input" id="option-{{ option.product_option_id }}-{{ option_value.product_option_value_id }}" type="checkbox" name="option[{{ option.product_option_id }}][]" value="{{ option_value.product_option_value_id }}">
+                    <label class="form-check-label" for="option-{{ option.product_option_id }}-{{ option_value.product_option_value_id }}">{% if option_value.image %} <img src="{{ option_value.image }}" alt="{{ option_value.name }} {% if option_value.price %} {{ option_value.price_prefix }} {{ option_value.price }} {% endif %}" class="img-thumbnail" /> {% endif %}
                     {{ option_value.name }}
                     {% if option_value.price %}
                     ({{ option_value.price_prefix }}{{ option_value.price }})
@@ -221,26 +221,26 @@
             </div>
             {% endif %}
             {% if option.type == 'text' %}
-            <div class="form-group row{% if option.required %} required {% endif %}">
+            <div class="form-group{% if option.required %} required {% endif %}">
               <label class="col-form-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
               <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" placeholder="{{ option.name }}" id="input-option{{ option.product_option_id }}" class="form-control" />
             </div>
             {% endif %}
             {% if option.type == 'textarea' %}
-            <div class="form-group row{% if option.required %} required {% endif %}">
+            <div class="form-group{% if option.required %} required {% endif %}">
               <label class="col-form-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
               <textarea name="option[{{ option.product_option_id }}]" rows="5" placeholder="{{ option.name }}" id="input-option{{ option.product_option_id }}" class="form-control">{{ option.value }}</textarea>
             </div>
             {% endif %}
             {% if option.type == 'file' %}
-            <div class="form-group row{% if option.required %} required {% endif %}">
+            <div class="form-group{% if option.required %} required {% endif %}">
               <label class="col-form-label">{{ option.name }}</label>
               <button type="button" id="button-upload{{ option.product_option_id }}" data-loading-text="{{ text_loading }}" class="btn btn-secondary btn-block"><i class="fa fa-upload"></i> {{ button_upload }}</button>
               <input type="hidden" name="option[{{ option.product_option_id }}]" value="" id="input-option{{ option.product_option_id }}" />
             </div>
             {% endif %}
             {% if option.type == 'date' %}
-            <div class="form-group row{% if option.required %} required {% endif %}">
+            <div class="form-group{% if option.required %} required {% endif %}">
               <label class="col-form-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
               <div class="input-group date" id="option_cal_{{ option.product_option_id }}" data-target-input="nearest">
                 <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" class="form-control datetimepicker-input" data-target="#option_cal_{{ option.product_option_id }}" />
@@ -256,7 +256,7 @@
             </div>
             {% endif %}
             {% if option.type == 'datetime' %}
-            <div class="form-group row{% if option.required %} required {% endif %}">
+            <div class="form-group{% if option.required %} required {% endif %}">
               <label class="col-form-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
               <div class="input-group datetime" id="option_cal_{{ option.product_option_id }}" data-target-input="nearest">
                 <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" class="form-control datetimepicker-input" data-target="#option_cal_{{ option.product_option_id }}" />
@@ -272,7 +272,7 @@
             </div>
             {% endif %}
             {% if option.type == 'time' %}
-            <div class="form-group row{% if option.required %} required {% endif %}">
+            <div class="form-group{% if option.required %} required {% endif %}">
               <label class="col-form-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
               <div class="input-group date" id="option_cal_{{ option.product_option_id }}" data-target-input="nearest">
                 <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" class="form-control datetimepicker-input" data-target="#option_cal_{{ option.product_option_id }}" />
@@ -292,7 +292,7 @@
             {% if recurrings %}
             <hr>
             <h3>{{ text_payment_recurring }}</h3>
-            <div class="form-group row required">
+            <div class="form-group required">
               <select name="recurring_id" class="form-control">
                 <option value="">{{ text_select }}</option>
                 {% for recurring in recurrings %}
@@ -302,7 +302,7 @@
               <div class="form-text" id="recurring-description"></div>
             </div>
             {% endif %}
-            <div class="form-group row">
+            <div class="form-group">
               <label class="col-form-label" for="input-quantity">{{ entry_qty }}</label>
               <input type="text" name="quantity" value="{{ minimum }}" size="2" id="input-quantity" class="form-control" />
               <input type="hidden" name="product_id" value="{{ product_id }}" />
