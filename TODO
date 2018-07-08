@@ -154,30 +154,7 @@ Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, bu
     //form-control-static none found
     
   //Buttons
-    //rename btn-default to btn-secondary @FINISHED (@TODO convert mostly to btn-light with sensible border to match legacy look/feel)
-
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:              <button type="button" id="button-custom-field{{ custom_field.custom_field_id }}" data-loading-text="{{ text_loading }}" class="btn btn-secondary"><i class="fa fa-upload"></i> {{ button_upload }}</button>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/account/address_form.twig:          <div class="pull-left"><a href="{{ back }}" class="btn btn-secondary">{{ button_back }}</a></div>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/account/address_list.twig:        <div class="pull-left"><a href="{{ back }}" class="btn btn-secondary">{{ button_back }}</a></div>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/account/affiliate.twig:              <button type="button" id="button-custom-field{{ custom_field.custom_field_id }}" data-loading-text="{{ text_loading }}" class="btn btn-secondary"><i class="fa fa-upload"></i> {{ button_upload }}</button>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:              <button type="button" id="button-custom-field{{ custom_field.custom_field_id }}" data-loading-text="{{ text_loading }}" class="btn btn-secondary"><i class="fa fa-upload"></i> {{ button_upload }}</button>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/account/edit.twig:          <div class="pull-left"><a href="{{ back }}" class="btn btn-secondary">{{ button_back }}</a></div>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/account/forgotten.twig:          <div class="pull-left"><a href="{{ back }}" class="btn btn-secondary">{{ button_back }}</a></div>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/account/newsletter.twig:          <div class="pull-left"><a href="{{ back }}" class="btn btn-secondary">{{ button_back }}</a></div>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/account/password.twig:          <div class="pull-left"><a href="{{ back }}" class="btn btn-secondary">{{ button_back }}</a></div>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/account/register.twig:              <button type="button" id="button-custom-field{{ custom_field.custom_field_id }}" data-loading-text="{{ text_loading }}" class="btn btn-secondary"><i class="fa fa-upload"></i> {{ button_upload }}</button>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/account/reset.twig:          <div class="pull-left"><a href="{{ back }}" class="btn btn-secondary">{{ button_back }}</a></div>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:                <button type="button" class="btn btn-secondary"><i class="fa fa-calendar"></i></button>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/account/return_form.twig:          <div class="pull-left"><a href="{{ back }}" class="btn btn-secondary">{{ button_back }}</a></div>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:              <button type="button" id="button-custom-field{{ custom_field.custom_field_id }}" data-loading-text="{{ text_loading }}" class="btn btn-secondary"><i class="fa fa-upload"></i> {{ button_upload }}</button>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/affiliate/register.twig:                <button type="button" id="button-custom-field{{ custom_field.custom_field_id }}" data-loading-text="{{ text_loading }}" class="btn btn-secondary"><i class="fa fa-upload"></i> {{ button_upload }}</button>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/checkout/guest_shipping.twig:      <button type="button" id="button-shipping-custom-field{{ custom_field.custom_field_id }}" data-loading-text="{{ text_loading }}" class="btn btn-secondary"><i class="fa fa-upload"></i> {{ button_upload }}</button>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/checkout/payment_address.twig:        <button type="button" id="button-payment-custom-field{{ custom_field.custom_field_id }}" data-loading-text="{{ text_loading }}" class="btn btn-secondary"><i class="fa fa-upload"></i> {{ button_upload }}</button>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:        <button type="button" id="button-payment-custom-field{{ custom_field.custom_field_id }}" data-loading-text="{{ text_loading }}" class="btn btn-secondary"><i class="fa fa-upload"></i> {{ button_upload }}</button>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/checkout/register.twig:        <button type="button" id="button-payment-custom-field{{ custom_field.custom_field_id }}" data-loading-text="{{ text_loading }}" class="btn btn-secondary"><i class="fa fa-upload"></i> {{ button_upload }}</button>
-    @TODO upload/catalog/view/theme/bootstrap4_basic/template/checkout/shipping_address.twig:        <button type="button" id="button-shipping-custom-field{{ custom_field.custom_field_id }}" data-loading-text="{{ text_loading }}" class="btn btn-secondary"><i class="fa fa-upload"></i> {{ button_upload }}</button>
-
-    
+    //rename btn-default to btn-light @FINISHED (convert mostly to btn-light with sensible border to match legacy look/feel)    
     
     //btn-xs found in:
     // upload/catalog/view/theme/bootstrap4_basic/stylesheet/stylesheet.css:.btn-xs {
