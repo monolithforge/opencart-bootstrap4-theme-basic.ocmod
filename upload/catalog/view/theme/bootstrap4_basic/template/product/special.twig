@@ -100,7 +100,7 @@
                   {% endfor %}
                 </div>
                 {% endif %} </div>
-              <div class="button-group">
+              <div class="button-group pull-right w-100 border-top bg-light text-center">
                 <button type="button" class="btn btn-light" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ button_cart }}</span></button>
                 <button type="button" class="btn btn-light" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');"><i class="fa fa-heart"></i></button>
                 <button type="button" class="btn btn-light" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');"><i class="fa fa-exchange"></i></button>

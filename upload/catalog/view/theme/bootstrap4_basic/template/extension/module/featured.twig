@@ -41,7 +41,7 @@
         </p>
         {% endif %}
       </div>
-      <div class="button-group">
+      <div class="button-group pull-right w-100 border-top bg-light text-center">
         <button class="btn btn-light" type="button" onclick="cart.add('{{ product.product_id }}');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ button_cart }}</span></button>
         <button class="btn btn-light" type="button" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');"><i class="fa fa-heart"></i></button>
         <button class="btn btn-light" type="button" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');"><i class="fa fa-exchange"></i></button>
