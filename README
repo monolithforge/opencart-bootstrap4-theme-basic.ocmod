@@ -16,6 +16,8 @@ Changelog:
 3.0.2.0-bootstrap4-theme-basic-a3
     bootstrap-datetimepicker (tempusdominus/bootstrap-4) 5.0.0
         -fixed remaining address custom date/time/datetime fields
+    Bootstrap 3 stateful buttons depreciated in 3.5.5 removed in v4
+        -fixed common.js add/remove cart button
 
 3.0.2.0-bootstrap4-theme-basic-a2
     update vendors:
