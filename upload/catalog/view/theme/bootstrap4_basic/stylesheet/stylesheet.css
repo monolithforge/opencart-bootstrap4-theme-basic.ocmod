@@ -230,16 +230,18 @@ body {
     display:none;
 }
 
-/* legacy auto hover look */
-#menu .dropdown:hover > .dropdown-menu {
-    display: block;
-}
-#menu .dropdown > .dropdown-toggle:active {
-    /*Without this, clicking will make it sticky*/
-    pointer-events: none;
-}
-#menu .nav-item:hover {
-    background-color: rgba(0, 0, 0, 0.1)
+@media (min-width: 768px) {
+	/* legacy auto hover look */
+	#menu .dropdown:hover > .dropdown-menu {
+	    display: block;
+	}
+	#menu .dropdown > .dropdown-toggle:active {
+	    /*Without this, clicking will make it sticky*/
+	    pointer-events: none;
+	}
+	#menu .nav-item:hover {
+	    background-color: rgba(0, 0, 0, 0.1)
+	}
 }
 
 /* END legacy 3.0 hover look/feel for #menu */
