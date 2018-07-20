@@ -47,10 +47,10 @@ Installation Instructions
 2. Go to Extensions/Installer on left menu
 
 3. Click on the upload button and upload the file opencart-bootstrap4-theme-basic.ocmod.zip
-   If there are errors, make sure step 2 was completed.
-   If step 2 was not completed correctly, go to Extensions/Installer and delete from history the opencart-bootstrap4-theme-basic.ocmod.zip and try again.
+   If there are errors, make sure step 1 was completed.
+   If step 1 was not completed correctly, go to Extensions/Installer and delete from history the opencart-bootstrap4-theme-basic.ocmod.zip and try again.
 
-4. Go to System/Users/User Groups and click on Administrators (and/or other groups needing permissions for PDF Wizard).
+4. Go to System/Users/User Groups and click on Administrators (and/or other groups needing permissions for Bootstrap 4 Theme Basic).
 
 5. Check Access Permission AND Modify Permission for extension/theme/bootstrap4_basic and click save.
 
