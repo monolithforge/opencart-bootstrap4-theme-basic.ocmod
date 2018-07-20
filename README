@@ -8,7 +8,7 @@ We love Opencart and Bootstrap and want to keep both of these beautiful pieces o
 * @author     dev@monolithforge.com
 * @copyright  2018 Monolith Forge, LLC
 * @license    https://www.monolithforge.com/license/opencart-bootstrap4-theme-basic.txt
-* @version    3.0.2.0-bootstrap4-theme-basic-a5-dev
+* @version    3.0.2.0-bootstrap4-theme-basic-a5
 
 -------
 
@@ -80,6 +80,9 @@ Go to https://bootstrap.build and create different color schemes and change the 
 -------
  
 Changelog:
+
+3.0.2.0-bootstrap4-theme-basic-a5
+    Fix installation instructions
 
 3.0.2.0-bootstrap4-theme-basic-a4
     added summary and installation instructions to README
