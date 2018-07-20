@@ -4,7 +4,7 @@
  * @author     dev@monolithforge.com
  * @copyright  2018 Monolith Forge, LLC
  * @license    https://www.monolithforge.com/license/opencart-bootstrap4-theme-basic.txt
- * @version    3.0.2.0-bootstrap4-theme-basic-a4-dev
+ * @version    3.0.2.0-bootstrap4-theme-basic-a4
  */
 /*@preserve
  * Tempus Dominus Bootstrap4 v5.0.0 (https://tempusdominus.github.io/bootstrap-4/)
