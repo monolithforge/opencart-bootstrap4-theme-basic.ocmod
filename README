@@ -81,6 +81,11 @@ Go to https://bootstrap.build and create different color schemes and change the 
  
 Changelog:
 
+3.0.2.0-bootstrap4-theme-basic-a6
+    Fix Language dropdown.
+        Thank you wisamx for your help at: https://github.com/wisamx/opencart-bootstrap4-theme-basic.ocmod
+        aka: https://github.com/wisamx/opencart-bootstrap4-theme-basic.ocmod/commits/patch-1
+
 3.0.2.0-bootstrap4-theme-basic-a5
     Fix installation instructions
 

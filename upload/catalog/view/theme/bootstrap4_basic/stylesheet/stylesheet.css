@@ -96,9 +96,18 @@ body {
 #top .container {
 	padding: 0 20px;
 }
-#top a, #form-currency .btn {
+#top a, #form-currency .btn,
+#top a, #form-language .btn {
     color:#777;
 }
+
+/* language flags. Force size in dropdowns and nav */
+#form-language > div > button > img,
+.language-select img {
+	width:16px;
+	height:11px;
+}
+
 /*#top #form-currency .currency-select,*/
 /*#top #form-language .language-select,*/
 /*#top-links .nav-item {*/
