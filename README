@@ -1,3 +1,8 @@
+Summary:
+Opencart 3 (currently) ships with Bootstrap 3. 
+This is mostly a tech preview of Bootstrap 4 with the hopes of adaption into future Opencart releases. 
+We love Opencart and Bootstrap and want to keep both of these beautiful pieces of software moving into the future!
+
 * @category   MonolithForge/OpenCart/Bootstrap4ThemeBasic
 * @package    opencart-bootstrap4-theme-basic
 * @author     dev@monolithforge.com
@@ -9,11 +14,75 @@
 
 Official Git URL: https://gitlab.com/MonolithForge/opencart-bootstrap4-theme-basic.ocmod
 
-DEMO: https://playground.opencartforge.com/u/m/monolithforge/demo/202/3.0.2.0/index.php
+Mirrored Git URL: https://github.com/monolithforge/opencart-bootstrap4-theme-basic.ocmod
+
+-------
+
+NOTE: Currently in Alpha 4 dev mode.
+
+DEMO LATEST: https://playground.opencartforge.com/u/m/monolithforge/demo/202/3.0.2.0/index.php
+
+OTHER DEMOS:
+Demo: https://playground.opencartforge.com/u/m/monolithforge/demo/202/3.0.0.0/index.php
+Demo: https://playground.opencartforge.com/u/m/monolithforge/demo/202/3.0.0.2/index.php
+Demo: https://playground.opencartforge.com/u/m/monolithforge/demo/202/3.0.1.0/index.php
+Demo: https://playground.opencartforge.com/u/m/monolithforge/demo/202/3.0.1.1/index.php
+Demo: https://playground.opencartforge.com/u/m/monolithforge/demo/202/3.0.1.2/index.php
+Demo: https://playground.opencartforge.com/u/m/monolithforge/demo/202/3.0.2.0/index.php
+
+-------
+
+Installation Instructions
+
+1. Make sure the apache user has permissions to write to the following directories:
+    chmod 0755 or 0777 admin/controller/extension/theme
+    chmod 0755 or 0777 admin/language/en-gb/extension/theme
+    chmod 0755 or 0777 admin/view/template/extension/theme
+    chmod 0755 or 0777 catalog/view/javascript/jquery/datetimepicker
+    chmod 0755 or 0777 catalog/view/javascript/jquery/datetimepicker/moment
+    chmod 0755 or 0777 catalog/view/theme
+
+    If 0755 does not work try 0777
+ 
+2. Go to Extensions/Installer on left menu
+
+3. Click on the upload button and upload the file opencart-bootstrap4-theme-basic.ocmod.zip
+   If there are errors, make sure step 2 was completed.
+   If step 2 was not completed correctly, go to Extensions/Installer and delete from history the opencart-bootstrap4-theme-basic.ocmod.zip and try again.
+
+4. Go to System/Users/User Groups and click on Administrators (and/or other groups needing permissions for PDF Wizard).
+
+5. Check Access Permission AND Modify Permission for extension/theme/bootstrap4_basic and click save.
+
+6. Go to Extensions/Extensions and select Themes in the dropdown
+
+7. On Bootstrap4 Basic Theme click the install button
+
+8. On the same page click on the Edit button as we need to enable the theme.
+
+9. Select Status Enabled and click save.
+
+10. Click on System/Settings in the left menu.
+
+11. Click on Your Store (default) (or your main store that you want to apply the theme to.)
+
+12. On the General tab under Theme select Bootstrap4 Basic Theme and click save.
+
+13. Go to your store and it should be in Bootstrap 4 ;-)
+
+14. If step 13 didn't work, go to Dashboard and click on the Gear button on the top right of this page.
+    When the popup occurs, Click on both refresh buttons for Theme and SASS. 
+
+Extra Credit:
+Look at the file catalog/view/theme/bootstrap4_basic/stylesheet/_variables.scss
+Go to https://bootstrap.build and create different color schemes and change the content of your bootstrap css file located in catalog/view/theme/bootstrap4_basic/template/common/header.twig
 
 -------
  
 Changelog:
+
+3.0.2.0-bootstrap4-theme-basic-a4
+    added summary and installation instructions to README
 
 3.0.2.0-bootstrap4-theme-basic-a3
     bootstrap-datetimepicker (tempusdominus/bootstrap-4) 5.0.0
